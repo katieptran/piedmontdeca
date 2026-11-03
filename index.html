@@ -7,616 +7,24 @@
 <meta name="description" content="Explore business, build confidence, and find your people with Piedmont DECA.">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
-:root {
-  --ink: #000000;
-  --blue: #0072ce;
-  --paper: #ffffff;
-}
-
-* { box-sizing: border-box; }
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 95px;
-}
-
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: 'DM Sans', sans-serif;
-}
-
-a { color: inherit; text-decoration: none; }
-button { font: inherit; cursor: pointer; }
-
-header {
-  height: 90px;
-  padding: 0 6%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #00000025;
-  background: var(--paper);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.brand {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  font: 700 22px 'Space Grotesk', sans-serif;
-  letter-spacing: -1px;
-}
-
-.diamond {
-  width: 28px;
-  height: 28px;
-  border: 6px solid var(--blue);
-  transform: rotate(45deg);
-  flex-shrink: 0;
-}
-
-.brand small {
-  font: 500 9px 'DM Sans', sans-serif;
-  display: block;
-  letter-spacing: 2px;
-  margin-top: 3px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  font-size: 13px;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-  background: var(--blue);
-  color: white;
-  padding: 16px 22px;
-  border: 0;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.btn.light {
-  background: white;
-  color: var(--blue);
-}
-
-.btn:hover { filter: brightness(.92); }
-
-:focus-visible {
-  outline: 3px solid #000;
-  outline-offset: 4px;
-}
-
-.hero {
-  padding: 68px 6% 55px;
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 6%;
-  align-items: center;
-}
-
-.eyebrow {
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-}
-
-.dot {
-  height: 7px;
-  width: 7px;
-  background: var(--blue);
-  border-radius: 50%;
-}
-
-h1 {
-  font: 500 clamp(58px, 6.1vw, 94px)/1.02 'Space Grotesk', sans-serif;
-  letter-spacing: -5px;
-  margin: 27px 0;
-}
-
-h1 em {
-  font-family: Georgia, serif;
-  font-weight: 400;
-  color: var(--blue);
-}
-
-p {
-  color: #555;
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-.hero p {
-  max-width: 390px;
-  margin-bottom: 28px;
-}
-
-.actions {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.textlink {
-  font-size: 13px;
-  border-bottom: 1px solid;
-  padding-bottom: 5px;
-}
-
-.hero-art {
-  height: 490px;
-  background: var(--blue);
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  color: white;
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(#ffffff0b 1px, transparent 1px),
-    linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
-  background-size: 43px 43px;
-}
-
-.big-diamond {
-  position: absolute;
-  height: 230px;
-  width: 230px;
-  border: 43px solid white;
-  transform: rotate(45deg);
-  top: 100px;
-  left: calc(50% - 115px);
-  box-shadow:
-    0 0 0 28px #ffffff10,
-    0 0 0 58px #ffffff08;
-}
-
-.art-top,
-.art-bottom {
-  display: flex;
-  justify-content: space-between;
-  z-index: 1;
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-.art-bottom { align-items: end; }
-
-.art-bottom strong {
-  font: 500 36px/1.05 'Space Grotesk', sans-serif;
-  letter-spacing: -1px;
-}
-
-.star {
-  position: absolute;
-  right: 25px;
-  top: 66px;
-  color: white;
-  font-size: 70px;
-}
-
-.floating {
-  position: absolute;
-  left: 20px;
-  bottom: 130px;
-  background: white;
-  color: black;
-  padding: 16px;
-  transform: rotate(-7deg);
-  font-size: 12px;
-  box-shadow: 0 8px 20px #0002;
-}
-
-.floating b {
-  display: block;
-  font-size: 20px;
-}
-
-.caption {
-  font-size: 10px;
-  color: #666;
-  margin-top: 12px;
-}
-
-.ticker {
-  border-top: 1px solid #00000025;
-  border-bottom: 1px solid #00000025;
-  display: flex;
-  justify-content: space-around;
-  padding: 22px 6%;
-  font: 600 12px 'Space Grotesk', sans-serif;
-  letter-spacing: 2px;
-  gap: 15px;
-}
-
-.ticker span { color: var(--blue); }
-
-.section { padding: 80px 6%; }
-
-.section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 30px;
-  margin-bottom: 36px;
-}
-
-h2 {
-  font: 500 clamp(32px, 3.5vw, 50px)/1.12 'Space Grotesk', sans-serif;
-  letter-spacing: -2px;
-  margin: 17px 0 0;
-}
-
-.section-head p {
-  max-width: 340px;
-  margin: 0;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.card {
-  border: 1px solid #00000025;
-  padding: 28px;
-  border-radius: 4px;
-  min-height: 235px;
-  transition: transform .2s;
-}
-
-.card:hover { transform: translateY(-5px); }
-
-.card .num {
-  font: 400 13px 'Space Grotesk', sans-serif;
-  color: #555;
-}
-
-.card h3 {
-  font: 500 25px 'Space Grotesk', sans-serif;
-  margin: 38px 0 8px;
-  letter-spacing: -1px;
-}
-
-.card p {
-  font-size: 13px;
-  margin: 0;
-}
-
-.explore { background: #f2f4f6; }
-
-.tabs {
-  display: flex;
-  gap: 8px;
-  margin: 25px 0;
-}
-
-.tabs button {
-  border: 1px solid #b8b8b8;
-  background: transparent;
-  padding: 10px 18px;
-  border-radius: 30px;
-  font-size: 12px;
-  color: black;
-}
-
-.tabs button[aria-selected="true"] {
-  background: var(--blue);
-  color: white;
-  border-color: var(--blue);
-}
-
-.path {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 55px;
-  align-items: center;
-}
-
-.path-visual {
-  background: #e4f0fa;
-  min-height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  font: 500 90px 'Space Grotesk', sans-serif;
-  letter-spacing: -8px;
-  color: var(--blue);
-  position: relative;
-}
-
-.path-visual small {
-  position: absolute;
-  left: 24px;
-  bottom: 22px;
-  font: 600 11px 'DM Sans', sans-serif;
-  letter-spacing: 2px;
-}
-
-.path h3 {
-  font: 500 30px 'Space Grotesk', sans-serif;
-  letter-spacing: -1px;
-  margin: 0;
-}
-
-.path p { max-width: 420px; }
-
-.path ul {
-  padding-left: 18px;
-  font-size: 13px;
-  line-height: 2;
-  color: #555;
-}
-
-.event-row {
-  display: grid;
-  grid-template-columns: 70px 1fr auto;
-  gap: 25px;
-  align-items: center;
-  padding: 27px 0;
-  border-top: 1px solid #00000025;
-}
-
-.event-icon {
-  font: 500 30px 'Space Grotesk', sans-serif;
-  color: var(--blue);
-}
-
-.event-row h3 {
-  font: 500 20px 'Space Grotesk', sans-serif;
-  margin: 0 0 6px;
-}
-
-.event-row p {
-  margin: 0;
-  font-size: 12px;
-}
-
-.tag {
-  font-size: 10px;
-  border: 1px solid #bbb;
-  border-radius: 20px;
-  padding: 8px 12px;
-  letter-spacing: 1px;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.person {
-  padding: 28px;
-  border: 1px solid #0002;
-  border-radius: 4px;
-  min-height: 195px;
-  background: white;
-}
-
-.initials {
-  display: inline-flex;
-  width: 48px;
-  height: 48px;
-  align-items: center;
-  justify-content: center;
-  background: #e4f0fa;
-  color: var(--blue);
-  border-radius: 50%;
-  font: 600 17px 'Space Grotesk', sans-serif;
-}
-
-.person h3 {
-  font: 500 23px 'Space Grotesk', sans-serif;
-  letter-spacing: -.7px;
-  margin: 22px 0 7px;
-}
-
-.person p {
-  font-size: 12px;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.social-banner {
-  margin-top: 28px;
-  padding: 28px;
-  background: var(--blue);
-  color: white;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-}
-
-.social-banner h3 {
-  font: 500 26px 'Space Grotesk', sans-serif;
-  margin: 0 0 8px;
-}
-
-.social-banner p {
-  color: white;
-  margin: 0;
-  font-size: 13px;
-}
-
-.social-link {
-  white-space: nowrap;
-  border-bottom: 1px solid white;
-  padding-bottom: 5px;
-  font-size: 14px;
-}
-
-.join {
-  margin: 0 6% 65px;
-  padding: 55px;
-  background: var(--blue);
-  color: white;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 35px;
-}
-
-.join h2 { margin-top: 13px; }
-
-.join p {
-  color: white;
-  max-width: 450px;
-}
-
-footer {
-  padding: 30px 6%;
-  border-top: 1px solid #00000025;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 11px;
-  color: #555;
-}
-
-dialog {
-  border: 0;
-  border-radius: 8px;
-  background: white;
-  color: black;
-  padding: 35px;
-  max-width: 470px;
-  width: 90%;
-}
-
-dialog::backdrop {
-  background: #000000cc;
-  backdrop-filter: blur(4px);
-}
-
-dialog h2 { font-size: 32px; }
-
-dialog .close {
-  float: right;
-  background: none;
-  border: 0;
-  font-size: 23px;
-}
-
-dialog li {
-  font-size: 14px;
-  line-height: 1.8;
-  margin-bottom: 12px;
-}
-
-dialog .btn { margin-top: 15px; }
-
-@media (max-width: 760px) {
-  header { height: 76px; }
-  nav { gap: 14px; }
-  nav a:not(.btn) { display: none; }
-
-  .hero {
-    grid-template-columns: 1fr;
-    padding-top: 40px;
-    gap: 35px;
-  }
-
-  h1 {
-    letter-spacing: -3px;
-    font-size: 66px;
-  }
-
-  .hero-art { height: 400px; }
-
-  .ticker {
-    font-size: 9px;
-    letter-spacing: .5px;
-    flex-wrap: wrap;
-  }
-
-  .section { padding: 55px 6%; }
-  .section-head { display: block; }
-  .section-head p { margin-top: 20px; }
-
-  .cards { grid-template-columns: 1fr; }
-  .card { min-height: 190px; }
-  .card h3 { margin-top: 25px; }
-
-  .path {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .tabs { flex-wrap: wrap; }
-
-  .join {
-    padding: 30px;
-    display: block;
-  }
-
-  .join .btn { margin-top: 15px; }
-
-  .event-row {
-    grid-template-columns: 45px 1fr;
-    gap: 12px;
-  }
-
-  .event-row .tag {
-    grid-column: 2;
-    justify-self: start;
-  }
-
-  footer {
-    gap: 20px;
-    align-items: start;
-  }
-
-  .brand { font-size: 19px; }
-  footer .brand { display: none; }
-  .team-grid { grid-template-columns: 1fr; }
-  .person { min-height: 170px; }
-
-  .social-banner {
-    align-items: start;
-    flex-direction: column;
-  }
-}
+:root{--blue:#0072ce;--ink:#172432;--muted:#536170;--line:#dbe2e8;--soft:#f4f7fa}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}body{margin:0;font:16px/1.65 Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}button{font:inherit;cursor:pointer}button,a{-webkit-tap-highlight-color:transparent}:focus-visible{outline:3px solid #0072ce;outline-offset:5px}.skip{position:absolute;left:15px;top:-70px;padding:12px;background:white;z-index:30}.skip:focus{top:10px}
+header{min-height:96px;padding:20px max(5%,calc((100% - 1160px)/2));display:flex;align-items:center;justify-content:space-between;gap:25px;border-top:5px solid var(--blue);border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:10}.brand{color:var(--ink);display:flex;align-items:center;gap:14px;font-size:22px;font-weight:700;line-height:1.2;letter-spacing:.2px;white-space:nowrap}.brand:hover{text-decoration:none}.brand small{display:block;font-size:11px;font-weight:400;color:var(--muted);letter-spacing:1.2px;margin-top:7px}.diamond{width:23px;height:23px;border:4px solid var(--blue);transform:rotate(45deg);flex-shrink:0}nav{display:flex;align-items:center;gap:23px;font-size:13px}nav>a{color:var(--ink)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--blue);color:#fff;border:1px solid var(--blue);border-radius:3px;padding:12px 20px;font-size:14px;font-weight:600;line-height:1.4}.btn:hover{background:#005fae;text-decoration:none}.btn.light{background:#fff;color:var(--blue);border-color:#fff}.btn span{display:none}
+main{overflow:hidden}.hero,.section{max-width:1280px;margin:auto;padding:72px 60px}.hero{display:grid;grid-template-columns:1.6fr 1fr;align-items:start;gap:75px;padding-top:85px;padding-bottom:80px}.eyebrow{text-transform:uppercase;letter-spacing:1.6px;font-size:11px;font-weight:700;color:var(--blue);margin-bottom:16px}.dot{display:none}h1,h2,h3,p{margin-top:0}h1{font:700 clamp(38px,4.2vw,58px)/1.13 Georgia,'Times New Roman',serif;letter-spacing:-1.3px;margin-bottom:24px}h1 em{font-style:normal;color:var(--blue)}p{color:var(--muted);line-height:1.8;font-size:15px}.hero p{max-width:570px;font-size:17px;margin-bottom:28px}.actions{display:flex;gap:24px;align-items:center}.textlink{font-size:14px;font-weight:600}.chapter-note{border-top:4px solid var(--blue);padding:27px 28px;background:var(--soft);margin-top:4px}.chapter-note h2{font:700 21px/1.3 Arial,sans-serif;letter-spacing:0;margin:0 0 16px}.chapter-note p{font-size:14px;margin-bottom:22px}.chapter-note dl{margin:0}.chapter-note dt{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-top:18px}.chapter-note dd{margin:4px 0 0;font-size:14px;font-weight:600}.chapter-note a{display:inline-block;margin-top:22px;font-size:13px;font-weight:600}
+.section{border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-bottom:35px}.section-head p{max-width:385px;margin:0}h2{font:700 clamp(28px,3vw,36px)/1.2 Georgia,'Times New Roman',serif;letter-spacing:-.5px;margin-bottom:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}.card{padding:24px 0 0;border-top:2px solid var(--blue)}.num{font-size:11px;letter-spacing:1px;color:var(--muted)}.card h3{font-size:19px;margin:16px 0 12px}.card p{font-size:14px;margin-bottom:0}.explore{background:var(--soft);max-width:none;padding-left:max(5%,calc((100% - 1160px)/2));padding-right:max(5%,calc((100% - 1160px)/2))}.tabs{display:flex;gap:0;flex-wrap:wrap;margin:30px 0;border-bottom:1px solid #b9c6d1}.tabs button{background:transparent;border:0;border-bottom:3px solid transparent;padding:13px 20px;color:var(--muted);font-size:14px}.tabs button[aria-selected=true]{color:var(--blue);border-bottom-color:var(--blue);font-weight:700}.path{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center}.path-visual{border-left:3px solid var(--blue);padding:20px 25px;display:flex;flex-direction:column;gap:15px;color:var(--blue)}.path-visual>span{font:400 58px/1.1 Georgia,serif}.path-visual small{font-size:10px;letter-spacing:1px;font-weight:700}.path h3{font-size:23px;margin-bottom:12px}.path p{font-size:14px}.path ul{padding-left:19px;color:var(--muted);font-size:14px;line-height:1.9}.event-row{display:grid;grid-template-columns:48px 1fr auto;gap:24px;align-items:center;padding:25px 0;border-top:1px solid var(--line)}.event-icon{font:400 25px Georgia,serif;color:var(--blue)}.event-row h3{font-size:17px;margin-bottom:5px}.event-row p{font-size:14px;margin:0}.tag{font-size:10px;letter-spacing:.7px;color:var(--muted);background:var(--soft);padding:7px 10px}.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 35px}.person{border-top:1px solid var(--line);padding:24px 0;min-height:118px}.initials{display:none}.person h3{font-size:18px;margin:0 0 6px}.person p{font-size:13px;margin:0}.social-banner{display:flex;justify-content:space-between;align-items:center;gap:30px;margin-top:28px;padding:27px 30px;background:var(--soft);border-left:3px solid var(--blue)}.social-banner h3{font-size:19px;margin-bottom:6px}.social-banner p{font-size:14px;margin:0}.social-link{font-size:14px;font-weight:600;white-space:nowrap}.join{background:#0072ce;color:white;padding:48px max(5%,calc((100% - 1160px)/2));display:flex;align-items:center;justify-content:space-between;gap:50px}.join .eyebrow,.join p{color:#fff}.join h2{font-size:32px}.join p{margin:16px 0 0;max-width:650px;font-size:15px}footer{padding:35px max(5%,calc((100% - 1160px)/2));display:flex;justify-content:space-between;gap:25px;align-items:center;background:var(--soft);font-size:12px;color:var(--muted)}footer .brand{font-size:15px}footer .diamond{width:17px;height:17px;border-width:3px}footer a{color:var(--muted)}dialog{width:90%;max-width:510px;border:1px solid var(--line);border-radius:4px;padding:35px;color:var(--ink)}dialog::backdrop{background:#10203099}dialog h2{font-size:29px;margin-bottom:20px}dialog .close{float:right;border:0;background:none;font-size:25px;color:var(--muted)}dialog li{font-size:14px;margin-bottom:14px;color:var(--muted)}dialog .btn{margin-top:12px}
+@media(max-width:1000px){header{flex-wrap:wrap;position:relative}nav{width:100%;justify-content:space-between;gap:12px}.hero{gap:35px;padding-top:55px}.hero,.section{padding-left:5%;padding-right:5%}.hero{grid-template-columns:1.3fr 1fr}}
+@media(max-width:650px){header{padding:18px 5%}.brand{font-size:20px}nav{flex-wrap:wrap;justify-content:flex-start;gap:14px;font-size:12px}nav .btn{padding:9px 12px;font-size:12px}.hero{grid-template-columns:1fr;padding:45px 5%;gap:32px}h1{font-size:40px;letter-spacing:-.8px}.hero p{font-size:16px}.section{padding:45px 5%}.section-head{display:block}.section-head p{margin-top:20px}.cards{grid-template-columns:1fr;gap:25px}.path{grid-template-columns:1fr;gap:20px}.path-visual{display:none}.tabs button{font-size:12px;padding:12px 10px}.event-row{grid-template-columns:32px 1fr;gap:16px}.event-row>.tag,.event-row>.textlink{grid-column:2;justify-self:start}.team-grid{grid-template-columns:1fr 1fr;gap:0 20px}.person h3{font-size:16px}.social-banner{flex-direction:column;align-items:start;padding:22px}.join{display:block;padding:35px 5%}.join h2{font-size:28px}.join .btn{margin-top:25px}footer{flex-direction:column;align-items:start;padding:30px 5%;gap:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 
-<body>
+<body><a class="skip" href="#main-content">Skip to content</a>
 <header>
   <a class="brand" href="#" aria-label="Piedmont DECA home">
     <span class="diamond"></span>
     <span>
       PIEDMONT DECA
-      <small>PREPARE. CONNECT. LEAD.</small>
+      <small>PIEDMONT HIGH SCHOOL</small>
     </span>
   </a>
 
@@ -631,88 +39,49 @@ dialog .btn { margin-top: 15px; }
   </nav>
 </header>
 
-<main>
+<main id="main-content">
   <section class="hero">
     <div>
       <div class="eyebrow">
         <span class="dot"></span>
-        Your next chapter starts here
+        Piedmont High School · DECA
       </div>
 
-      <h1>
-        Big ideas.<br>
-        Real impact.<br>
-        <em>Your move.</em>
-      </h1>
+      <h1>Preparing students for<br><em>leadership in business.</em></h1>
 
       <p>
-        A place for the ambitious, the curious, and the just-getting-started.
-        Find your people and build what comes next with Piedmont DECA.
+        Piedmont DECA connects classroom learning with practical experience in business, finance, marketing, and entrepreneurship.
       </p>
 
       <div class="actions">
         <button class="btn" onclick="document.querySelector('dialog').showModal()">
-          Find your place <span>↗</span>
+          Membership information
         </button>
-        <a class="textlink" href="#about">Meet DECA ↓</a>
+        <a class="textlink" href="#about">About our chapter</a>
       </div>
     </div>
 
-    <div>
-      <div
-        class="hero-art"
-        role="img"
-        aria-label="Graphic of a white diamond on a DECA blue grid, with the words Future in the making"
-      >
-        <div class="grid"></div>
-
-        <div class="art-top">
-          <span>PIEDMONT / DECA</span>
-          <span>IDEAS INTO ACTION ↗</span>
-        </div>
-
-        <div class="big-diamond"></div>
-        <div class="star">✳</div>
-
-        <div class="floating">
-          <b>NEXT UP: YOU.</b>
-          Bring your ambition.
-        </div>
-
-        <div class="art-bottom">
-          <strong>Future in<br>the making.</strong>
-          <span>THINK BIG.<br><br>START HERE.</span>
-        </div>
-      </div>
-
-      <div class="caption">A little curiosity. A lot of possibility.</div>
-    </div>
+    <aside class="chapter-note" aria-labelledby="chapter-info"><h2 id="chapter-info">Chapter information</h2><p>Student leadership, competitive events, and professional development at Piedmont High School.</p><dl><dt>Membership eligibility</dt><dd>Enrollment in AP Business and Personal Finance</dd><dt>Chapter advisor</dt><dd>Mr. Christensen</dd></dl><a href="#team">Meet our chapter leadership →</a></aside>
   </section>
 
-  <div class="ticker">
-    EMERGING LEADERS <span>✳</span>
-    ENTREPRENEURS <span>✳</span>
-    CREATIVE THINKERS <span>✳</span>
-    FUTURE YOU
-  </div>
+
 
   <section class="section" id="about">
     <div class="section-head">
       <div>
-        <div class="eyebrow">01 / More than a club</div>
-        <h2>Learn it. Try it.<br>Make it yours.</h2>
+        <div class="eyebrow">About the chapter</div>
+        <h2>Learning beyond the classroom</h2>
       </div>
 
       <p>
-        Step outside the classroom and into challenges that help you
-        discover what you're capable of.
+        Our chapter helps students apply business concepts, develop professional skills, and learn through collaboration.
       </p>
     </div>
 
     <div class="cards">
       <article class="card">
-        <span class="num">01 / COMPETE ↗</span>
-        <h3>Think on your feet.</h3>
+        <span class="num">COMPETITION</span>
+        <h3>Competitive preparation</h3>
         <p>
           Practice business scenarios, sharpen your presentation skills,
           and turn your ideas into a compelling pitch.
@@ -720,8 +89,8 @@ dialog .btn { margin-top: 15px; }
       </article>
 
       <article class="card">
-        <span class="num">02 / CONNECT ↗</span>
-        <h3>Find your people.</h3>
+        <span class="num">COMMUNITY</span>
+        <h3>Student collaboration</h3>
         <p>
           Collaborate with students who share your curiosity.
           Learn together, exchange ideas, and celebrate each other's progress.
@@ -729,8 +98,8 @@ dialog .btn { margin-top: 15px; }
       </article>
 
       <article class="card">
-        <span class="num">03 / LEAD ↗</span>
-        <h3>Build your confidence.</h3>
+        <span class="num">LEADERSHIP</span>
+        <h3>Professional development</h3>
         <p>
           Take initiative, contribute to chapter activities, and develop
           skills you'll carry into whatever comes next.
@@ -740,8 +109,8 @@ dialog .btn { margin-top: 15px; }
   </section>
 
   <section class="section explore" id="compete">
-    <div class="eyebrow">02 / Find your lane</div>
-    <h2>There's more than one<br>way to make your mark.</h2>
+    <div class="eyebrow">Areas of study</div>
+    <h2>Explore business disciplines</h2>
 
     <div class="tabs" role="tablist" aria-label="Explore business areas">
       <button
@@ -790,7 +159,7 @@ dialog .btn { margin-top: 15px; }
       </div>
 
       <div>
-        <h3 id="path-title">Make people pay attention.</h3>
+        <h3 id="path-title">Marketing & brand strategy</h3>
         <p id="path-text">
           Explore how brands connect with people. Bring a creative point
           of view to strategy, storytelling, and customer experience.
@@ -808,13 +177,12 @@ dialog .btn { margin-top: 15px; }
   <section class="section" id="events">
     <div class="section-head">
       <div>
-        <div class="eyebrow">03 / Get in the room</div>
-        <h2>Your starting lineup.</h2>
+        <div class="eyebrow">Participation</div>
+        <h2>Chapter activities</h2>
       </div>
 
       <p>
-        Ways to get involved. Chapter dates and meeting details will be
-        added when confirmed.
+        Explore opportunities to participate. Meeting dates and event details will be posted once confirmed.
       </p>
     </div>
 
@@ -854,8 +222,8 @@ dialog .btn { margin-top: 15px; }
   <section class="section" id="team" aria-labelledby="team-heading">
     <div class="section-head">
       <div>
-        <div class="eyebrow">04 / Meet your chapter</div>
-        <h2 id="team-heading">The people behind<br>the possibilities.</h2>
+        <div class="eyebrow">Chapter leadership</div>
+        <h2 id="team-heading">Officers &amp; advisor</h2>
       </div>
 
       <p>
@@ -904,7 +272,7 @@ dialog .btn { margin-top: 15px; }
 
     <div class="social-banner">
       <div>
-        <h3>Stay in the loop.</h3>
+        <h3>Connect with Piedmont DECA</h3>
         <p>Follow Piedmont DECA on Instagram for chapter updates.</p>
       </div>
 
@@ -921,7 +289,7 @@ dialog .btn { margin-top: 15px; }
   <section class="join">
     <div>
       <div class="eyebrow">Membership requirement</div>
-      <h2>Your next step starts in class.</h2>
+      <h2>Membership &amp; eligibility</h2>
       <p>
         To join Piedmont DECA, you must be enrolled in
         AP Business and Personal Finance.
@@ -931,7 +299,7 @@ dialog .btn { margin-top: 15px; }
     <button
       class="btn light"
       onclick="document.querySelector('dialog').showModal()"
-    >Let's get started <span>↗</span></button>
+    >How to join</button>
   </section>
 </main>
 
@@ -948,7 +316,7 @@ dialog .btn { margin-top: 15px; }
   >Instagram · @piedmonthighdeca ↗</a>
 
   <span>
-    Chapter website concept ·
+    Piedmont High School ·
     <a href="https://www.deca.org" target="_blank" rel="noopener">
       Discover DECA ↗
     </a>
@@ -962,8 +330,8 @@ dialog .btn { margin-top: 15px; }
     onclick="this.closest('dialog').close()"
   >×</button>
 
-  <div class="eyebrow">Make your first move</div>
-  <h2 id="join-title">Start with a hello.</h2>
+  <div class="eyebrow">Membership information</div>
+  <h2 id="join-title">Joining Piedmont DECA</h2>
 
   <p>
     To join Piedmont DECA, you must be enrolled in
@@ -979,7 +347,7 @@ dialog .btn { margin-top: 15px; }
       then ask about the next meeting and registration process.
     </li>
     <li>
-      Bring your questions and an idea you're excited to explore.
+      Follow the chapter on Instagram for updates and announcements.
     </li>
   </ol>
 
@@ -988,7 +356,7 @@ dialog .btn { margin-top: 15px; }
   </p>
 
   <button class="btn" onclick="this.closest('dialog').close()">
-    Got it <span>✓</span>
+    Close
   </button>
 </dialog>
 
@@ -1008,7 +376,7 @@ const paths = [
   [
     '$↗',
     'NUMBERS WITH A PURPOSE',
-    'See the story in the numbers.',
+    'Finance & business analysis',
     'Explore how financial decisions shape businesses. Practice evaluating options, understanding risk, and explaining your reasoning.',
     [
       'Financial analysis',
@@ -1019,7 +387,7 @@ const paths = [
   [
     '✳↗',
     'FROM WHAT IF TO WHAT’S NEXT',
-    'Give your idea a beginning.',
+    'Entrepreneurship & innovation',
     'Spot a problem worth solving. Explore how an idea becomes a business, from understanding customers to building a convincing pitch.',
     [
       'Business models',
@@ -1030,7 +398,7 @@ const paths = [
   [
     '◎↗',
     'EXPERIENCES PEOPLE REMEMBER',
-    'Turn moments into experiences.',
+    'Hospitality & customer experience',
     'Discover the business behind great experiences. Explore service, travel, and the details that make people feel welcome.',
     [
       'Guest experience',
