@@ -6,6 +6,9 @@
 <title>Piedmont DECA | Piedmont High School</title>
 <meta name="description" content="Explore business, build confidence, and find your people with Piedmont DECA.">
 
+<script>
+(function(){var theme;try{theme=localStorage.getItem('piedmont-deca-theme')}catch(e){}if(theme!=='light'&&theme!=='dark'){theme=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.dataset.theme=theme;document.documentElement.style.colorScheme=theme})();
+</script>
 <style>
 :root{--blue:#0072ce;--ink:#172432;--muted:#536170;--line:#dbe2e8;--soft:#f4f7fa}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}body{margin:0;font:16px/1.65 Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}button{font:inherit;cursor:pointer}button,a{-webkit-tap-highlight-color:transparent}:focus-visible{outline:3px solid #0072ce;outline-offset:5px}.skip{position:absolute;left:15px;top:-70px;padding:12px;background:white;z-index:30}.skip:focus{top:10px}
@@ -37,7 +40,31 @@ main{overflow:hidden}.hero,.section{max-width:1280px;margin:auto;padding:72px 60
 /* Chapter hub layout */
 body{font-family:Arial,Helvetica,sans-serif;background:#fff}h1,h2{font-family:Arial,Helvetica,sans-serif;letter-spacing:-1px}header{min-height:86px}header .official-logo{width:205px}nav{gap:20px}h1{font-size:clamp(36px,4vw,52px);line-height:1.12}.hero{grid-template-columns:.9fr 1.2fr;gap:48px;padding-top:55px;padding-bottom:45px;align-items:center}.hero p{font-size:16px}.hero-chapter-photo{margin:0}.hero-chapter-photo img{display:block;width:100%;height:auto;border-radius:6px;border:1px solid var(--line)}.hero-chapter-photo figcaption{font-size:11px;color:var(--muted);margin-top:9px}.chapter-shortcuts{max-width:1160px;margin:0 auto 45px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:5px;overflow:hidden}.chapter-shortcuts a{display:flex;flex-direction:column;padding:23px;gap:5px;color:var(--ink);border-right:1px solid var(--line);text-decoration:none}.chapter-shortcuts a:last-child{border-right:0}.chapter-shortcuts a:hover{background:var(--soft)}.chapter-shortcuts span{font-size:11px;color:var(--blue);font-weight:700}.chapter-shortcuts strong{font-size:14px}.chapter-shortcuts small{font-size:11px;color:var(--muted)}.join-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}.join-steps li{display:flex;gap:16px}.join-steps li>span{display:flex;align-items:center;justify-content:center;width:32px;height:32px;flex-shrink:0;border-radius:50%;background:#e8f2fb;color:var(--blue);font-size:13px;font-weight:700}.join-steps h3{font-size:17px;margin:3px 0 10px}.join-steps p{font-size:14px;margin:0}.resource-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.resource-links>a{padding:25px;border:1px solid var(--line);border-radius:5px;color:var(--ink);text-decoration:none}.resource-links>a:hover{border-color:var(--blue);background:var(--soft)}.resource-type{font-size:10px;letter-spacing:1px;color:var(--blue);font-weight:700}.resource-links h3{font-size:18px;margin:15px 0 10px}.resource-links h3 span{float:right;color:var(--blue)}.resource-links p{font-size:13px;margin:0}.faq-list{max-width:850px}.faq-list details{border-top:1px solid var(--line);padding:20px 0}.faq-list details:last-child{border-bottom:1px solid var(--line)}.faq-list summary{cursor:pointer;font-size:16px;font-weight:600}.faq-list p{font-size:14px;margin:15px 0 0}
 @media(max-width:1200px){.chapter-shortcuts{margin-left:5%;margin-right:5%}header{flex-wrap:wrap;position:relative}nav{width:100%;justify-content:space-between;flex-wrap:wrap}}@media(max-width:800px){.hero{grid-template-columns:1fr;gap:30px}.hero-chapter-photo{max-width:650px}.chapter-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}.chapter-shortcuts a:nth-child(2){border-right:0}.chapter-shortcuts a:nth-child(-n+2){border-bottom:1px solid var(--line)}.join-steps,.resource-links{grid-template-columns:1fr;gap:22px}.hero h1 br:first-child{display:none}}@media(max-width:450px){.chapter-shortcuts{grid-template-columns:1fr}.chapter-shortcuts a{border-right:0;border-bottom:1px solid var(--line)}.chapter-shortcuts a:last-child{border-bottom:0}.hero h1{font-size:36px}.hero h1 br{display:none}.actions{gap:18px;flex-wrap:wrap}}
-.meeting-banner{max-width:1160px;margin:0 auto 20px;padding:18px 23px;background:#e8f2fb;border-left:3px solid #0072ce;display:flex;justify-content:space-between;gap:16px;font-size:14px}.meeting-banner span{color:#334a60}@media(max-width:1200px){.meeting-banner{margin-left:5%;margin-right:5%}}@media(max-width:650px){.meeting-banner{flex-direction:column;gap:4px}} .person p a{overflow-wrap:anywhere;font-size:11px}.resource-links{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:800px){.resource-links{grid-template-columns:1fr}} .chapter-footer{display:grid;grid-template-columns:1fr .8fr 1.2fr;align-items:start;gap:45px;padding-top:45px;padding-bottom:45px}.chapter-footer p{font-size:12px;line-height:1.8;margin:12px 0 0}.chapter-footer h2{font:700 13px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.4px;margin:0 0 14px}.chapter-footer .footer-links{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:10px;width:auto;font-size:12px}.footer-links h2{margin-bottom:4px}.footer-contact>a{font-size:12px}.footer-contact a{overflow-wrap:anywhere}.chapter-footer a:hover{color:#0072ce}@media(max-width:760px){.chapter-footer{grid-template-columns:1fr;gap:30px}} </style>
+.meeting-banner{max-width:1160px;margin:0 auto 20px;padding:18px 23px;background:#e8f2fb;border-left:3px solid #0072ce;display:flex;justify-content:space-between;gap:16px;font-size:14px}.meeting-banner span{color:#334a60}@media(max-width:1200px){.meeting-banner{margin-left:5%;margin-right:5%}}@media(max-width:650px){.meeting-banner{flex-direction:column;gap:4px}} .person p a{overflow-wrap:anywhere;font-size:11px}.resource-links{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:800px){.resource-links{grid-template-columns:1fr}} .chapter-footer{display:grid;grid-template-columns:1fr .8fr 1.2fr;align-items:start;gap:45px;padding-top:45px;padding-bottom:45px}.chapter-footer p{font-size:12px;line-height:1.8;margin:12px 0 0}.chapter-footer h2{font:700 13px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.4px;margin:0 0 14px}.chapter-footer .footer-links{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:10px;width:auto;font-size:12px}.footer-links h2{margin-bottom:4px}.footer-contact>a{font-size:12px}.footer-contact a{overflow-wrap:anywhere}.chapter-footer a:hover{color:#0072ce}@media(max-width:760px){.chapter-footer{grid-template-columns:1fr;gap:30px}} 
+.theme-toggle{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;padding:9px 12px;border:1px solid var(--line);border-radius:4px;background:transparent;color:var(--ink);font-size:12px;font-weight:600}.theme-toggle:hover{background:var(--soft)}#theme-icon{font-size:17px;line-height:1}
+html[data-theme="dark"]{--ink:#edf2f8;--muted:#b7c2d0;--line:#344252;--soft:#1b2837;--paper:#111b27;color-scheme:dark}
+html[data-theme="dark"] body,html[data-theme="dark"] header{background:#111b27;color:var(--ink)}
+html[data-theme="dark"] p{color:var(--muted)}
+html[data-theme="dark"] a,html[data-theme="dark"] .eyebrow,html[data-theme="dark"] h1 em,html[data-theme="dark"] .event-icon,html[data-theme="dark"] .resource-type,html[data-theme="dark"] .path-visual{color:#79bdff}
+html[data-theme="dark"] nav>a,html[data-theme="dark"] .chapter-shortcuts a,html[data-theme="dark"] .resource-links>a{color:var(--ink)}
+html[data-theme="dark"] .explore,html[data-theme="dark"] .chapter-note,html[data-theme="dark"] .social-banner,html[data-theme="dark"] footer{background:var(--soft)}
+html[data-theme="dark"] .person{background:transparent}
+html[data-theme="dark"] .card .num,html[data-theme="dark"] .path ul,html[data-theme="dark"] .person p,html[data-theme="dark"] footer a{color:var(--muted)}
+html[data-theme="dark"] .tabs button{color:var(--muted)}
+html[data-theme="dark"] .tabs button[aria-selected="true"]{color:#fff}
+html[data-theme="dark"] .btn{color:#fff}
+html[data-theme="dark"] .btn.light{color:#0072ce}
+html[data-theme="dark"] .path-visual,html[data-theme="dark"] .join-steps li>span,html[data-theme="dark"] .meeting-banner{background:#20374d;color:#a7d3ff}
+html[data-theme="dark"] .meeting-banner span{color:#d1e4f6}
+html[data-theme="dark"] .join{background:#005fae}
+html[data-theme="dark"] .join p,html[data-theme="dark"] .join .eyebrow{color:#fff}
+html[data-theme="dark"] dialog{background:#172432;color:var(--ink);border-color:var(--line)}
+html[data-theme="dark"] dialog li,html[data-theme="dark"] dialog .close{color:var(--muted)}
+html[data-theme="dark"] .sponsor-table td:nth-child(2){color:#79bdff}
+html[data-theme="dark"] .official-logo{background:#fff;padding:8px;border-radius:3px}
+html[data-theme="dark"] :focus-visible{outline-color:#9bceff}
+@media(max-width:650px){nav .theme-toggle{font-size:12px;padding:8px 10px}}
+</style>
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="canonical" href="https://piedmontdeca.org/">
 <meta property="og:url" content="https://piedmontdeca.org/">
@@ -55,7 +82,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#fff}h1,h2{font-family:Ar
     <button class="btn" onclick="document.querySelector('dialog').showModal()">
       Join the chapter <span>↗</span>
     </button>
-  </nav>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode"><span aria-hidden="true" id="theme-icon">☾</span><span id="theme-label">Dark mode</span></button></nav>
 </header>
 
 <main id="main-content">
@@ -454,6 +481,19 @@ document.querySelector('.tabs').addEventListener('keydown', event => {
     tabs[next].focus();
   }
 });
+</script>
+<script>
+(function(){
+const button=document.getElementById('theme-toggle');
+const label=document.getElementById('theme-label');
+const icon=document.getElementById('theme-icon');
+function sync(){const dark=document.documentElement.dataset.theme==='dark';label.textContent=dark?'Light mode':'Dark mode';icon.textContent=dark?'☀':'☾';button.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode')}
+button.addEventListener('click',function(){const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;document.documentElement.style.colorScheme=theme;try{localStorage.setItem('piedmont-deca-theme',theme)}catch(e){}sync()});
+sync();
+const preference=window.matchMedia('(prefers-color-scheme: dark)');
+function systemChanged(event){let saved;try{saved=localStorage.getItem('piedmont-deca-theme')}catch(e){}if(saved==='light'||saved==='dark')return;const theme=event.matches?'dark':'light';document.documentElement.dataset.theme=theme;document.documentElement.style.colorScheme=theme;sync()}
+if(preference.addEventListener)preference.addEventListener('change',systemChanged);
+})();
 </script>
 </body>
 </html>
