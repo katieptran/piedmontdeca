@@ -1,8 +1,8 @@
 # Piedmont High School DECA
 
-**[Visit the Piedmont DECA website](https://katieptran.github.io/piedmontdeca/)**
+**[Visit the Piedmont DECA website](https://katieptran.github.io/piedmontdeca/?v=20261102)**
 
-[View sponsorship tiers & benefits](https://katieptran.github.io/piedmontdeca/#support) · [Meet our officers & advisor](https://katieptran.github.io/piedmontdeca/#team)
+[View sponsorship tiers & benefits](https://katieptran.github.io/piedmontdeca/?v=20261102#support) · [Meet our officers & advisor](https://katieptran.github.io/piedmontdeca/?v=20261102#team)
 
 Empowering the next generation of business leaders through hands-on learning, competitive experiences, and professional development.
 
