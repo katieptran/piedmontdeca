@@ -64,6 +64,8 @@ html[data-theme="dark"] .sponsor-table td:nth-child(2){color:#79bdff}
 html[data-theme="dark"] .official-logo{background:#fff;padding:8px;border-radius:3px}
 html[data-theme="dark"] :focus-visible{outline-color:#9bceff}
 @media(max-width:650px){nav .theme-toggle{font-size:12px;padding:8px 10px}}
+
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}.contact-details h3{font-size:17px;margin:0 0 7px}.contact-details p{font-size:14px;margin:0 0 27px}.contact-details a{overflow-wrap:anywhere}.contact-form{padding:30px;background:var(--soft);border:1px solid var(--line);border-radius:5px}.contact-form h3{font-size:21px;margin:0 0 12px}.contact-form label{display:block;font-size:13px;font-weight:600;margin:18px 0 7px}.contact-form input,.contact-form select,.contact-form textarea{width:100%;font:inherit;font-size:14px;padding:11px 12px;background:#fff;border:1px solid #a8b5c3;border-radius:3px;color:var(--ink)}.contact-form textarea{resize:vertical}.contact-form .btn{margin-top:20px}.contact-form .contact-help{font-size:12px;line-height:1.7;margin:12px 0 0}html[data-theme="dark"] .contact-form input,html[data-theme="dark"] .contact-form select,html[data-theme="dark"] .contact-form textarea{background:#111b27;border-color:#55677b;color:var(--ink)}@media(max-width:800px){.contact-grid{grid-template-columns:1fr;gap:30px}.contact-form{padding:23px}}
 </style>
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="canonical" href="https://piedmontdeca.org/">
@@ -78,7 +80,7 @@ html[data-theme="dark"] :focus-visible{outline-color:#9bceff}
     <a href="#about">About</a><a href="#resources">Resources</a>
     <a href="#compete">Compete</a>
     <a href="#team">Our team</a><a href="#support">Support us</a>
-    <a href="#events">Activities</a>
+    <a href="#events">Activities</a><a href="#contact">Contact</a>
     <button class="btn" onclick="document.querySelector('dialog').showModal()">
       Join the chapter <span>↗</span>
     </button>
@@ -335,6 +337,28 @@ html[data-theme="dark"] :focus-visible{outline-color:#9bceff}
 
 <section class="section" id="support" aria-labelledby="support-heading"><div class="section-head"><div><div class="eyebrow">Support our chapter</div><h2 id="support-heading">Sponsorship tiers &amp; benefits</h2></div><p>Your support helps cover competition participation, advisor support, educational resources, and chapter fees.</p></div><table class="sponsor-table"><thead><tr><th scope="col">Sponsorship level</th><th scope="col">Contribution</th><th scope="col">Recognition &amp; benefits</th></tr></thead><tbody><tr><td>Platinum Diamond</td><td>$2,001+</td><td>Social media shout-out; handwritten thank-you letter; DECA blanket; logo featured on the website for 3 years; logo on the annual DECA shirt; logo on the chapter banner.</td></tr><tr><td>Gold Diamond</td><td>$1,001–$2,000</td><td>Social media shout-out; handwritten thank-you letter; DECA blanket; logo featured on the website for 2 years; logo on the annual DECA shirt.</td></tr><tr><td>Bronze Diamond</td><td>$501–$1,000</td><td>Social media shout-out; handwritten thank-you letter; DECA tote bag; logo featured on the website for 1 year.</td></tr><tr><td>DECA Believer</td><td>$101–$500</td><td>Social media shout-out; handwritten thank-you letter; DECA lanyard.</td></tr><tr><td>Friend of DECA</td><td>$10–$100</td><td>Social media shout-out; handwritten thank-you letter.</td></tr></tbody></table><p class="sponsor-note">Interested in supporting Piedmont DECA? Contact our VP of Fundraising, Tobias Tsai, or chapter advisor, Mr. Christensen. You can also <a href="https://www.instagram.com/piedmonthighdeca/" target="_blank" rel="noopener noreferrer">connect with our chapter on Instagram</a>.</p></section>
 
+
+<section class="section" id="contact" aria-labelledby="contact-heading">
+<div class="section-head"><div><div class="eyebrow">Get in touch</div><h2 id="contact-heading">Contact Piedmont DECA</h2></div><p>Questions about membership, competitions, or sponsorships? Connect with our advisor or officer team.</p></div>
+<div class="contact-grid">
+<div class="contact-details">
+<h3>Email our advisor</h3><p>Mr. Christensen<br><a href="mailto:fchristensen@piedmont.k12.ca.us">fchristensen@piedmont.k12.ca.us</a></p>
+<h3>Message us on Instagram</h3><p><a href="https://www.instagram.com/piedmonthighdeca/" target="_blank" rel="noopener noreferrer">@piedmonthighdeca ↗</a></p>
+<h3>Meet us in person</h3><p>Every Tuesday during lunch<br>Room 204 · Piedmont High School</p>
+<h3>Chapter members: join Slack</h3><p>Slack is our main member communication channel. Ask an officer or Mr. Christensen for an invitation.</p>
+<a href="#team" class="textlink">Meet the officer team →</a>
+</div>
+<form id="contact-form" class="contact-form">
+<h3>Write a message</h3>
+<p class="contact-help" id="contact-help">This form opens a draft in your email app. Review the draft and press Send there to deliver your message. Your message is not submitted through this website.</p>
+<label for="contact-name">Your name</label><input id="contact-name" name="name" autocomplete="name" maxlength="120" required>
+<label for="contact-email">Your email</label><input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+<label for="contact-topic">What can we help with?</label><select id="contact-topic" name="topic"><option>Membership</option><option>Competitions</option><option>Sponsorships</option><option>Other question</option></select>
+<label for="contact-message">Your message</label><textarea id="contact-message" name="message" rows="5" maxlength="5000" required></textarea>
+<button type="submit" class="btn" aria-describedby="contact-help">Open email draft</button>
+<p class="contact-help">If your email app does not open, email <a href="mailto:fchristensen@piedmont.k12.ca.us">fchristensen@piedmont.k12.ca.us</a> directly.</p>
+</form>
+</div></section>
 <section class="section" id="faq" aria-labelledby="faq-heading"><div class="section-head"><div><div class="eyebrow">Common questions</div><h2 id="faq-heading">Before you get started</h2></div></div><div class="faq-list"><details><summary>How does the chapter communicate with members?</summary><p>Slack is our main communication channel for meeting reminders, competition updates, and announcements. Ask an officer or <a href="mailto:fchristensen@piedmont.k12.ca.us">Mr. Christensen</a> for a chapter Slack invitation.</p></details><details><summary>Who can join Piedmont DECA?</summary><p>Students enrolled in AP Business and Personal Finance can join. Contact Mr. Christensen for registration details.</p></details><details><summary>Where can I find meeting dates?</summary><p>Chapter meetings take place every Tuesday during lunch in Room 204.</p></details><details><summary>How can families and local businesses help?</summary><p>Our sponsorship options range from Friend of DECA to Platinum Diamond. <a href="#support">View the contribution levels and benefits</a>, then contact Tobias Tsai or Mr. Christensen.</p></details><details><summary>Who should I contact with questions?</summary><p>Email our advisor, Mr. Christensen, at <a href="mailto:fchristensen@piedmont.k12.ca.us">fchristensen@piedmont.k12.ca.us</a>. You can also connect with the officer team through <a href="https://www.instagram.com/piedmonthighdeca/" target="_blank" rel="noopener noreferrer">the chapter’s Instagram</a>.</p></details></div></section>
   <section class="join">
     <div>
@@ -353,7 +377,7 @@ html[data-theme="dark"] :focus-visible{outline-color:#9bceff}
   </section>
 </main>
 
-<footer class="chapter-footer"><div class="footer-intro"><a class="brand" href="#" aria-label="Piedmont DECA home"><img class="official-logo footer-logo" src="./images/piedmont-deca-logo-black.png" alt="Piedmont DECA" width="2201" height="550" loading="lazy"></a><p>Piedmont High School DECA</p><p>Meetings: Tuesdays during lunch<br>Room 204</p></div><nav class="footer-links" aria-label="DECA resources"><h2>DECA resources</h2><a href="https://www.deca.org/" target="_blank" rel="noopener noreferrer">DECA Inc. ↗</a><a href="https://californiadeca.org/" target="_blank" rel="noopener noreferrer">California DECA ↗</a><a href="https://www.decaplus.org/" target="_blank" rel="noopener noreferrer">DECA+ competition study ↗</a></nav><div class="footer-contact"><h2>Connect with our chapter</h2><p><strong>Member communication: Slack</strong><br>Ask an officer or Mr. Christensen for an invitation.</p><a href="https://www.instagram.com/piedmonthighdeca/" target="_blank" rel="noopener noreferrer">Instagram · @piedmonthighdeca ↗</a><p>Chapter advisor: Mr. Christensen<br><a href="mailto:fchristensen@piedmont.k12.ca.us">fchristensen@piedmont.k12.ca.us</a></p></div></footer>
+<footer class="chapter-footer"><div class="footer-intro"><a class="brand" href="#" aria-label="Piedmont DECA home"><img class="official-logo footer-logo" src="./images/piedmont-deca-logo-black.png" alt="Piedmont DECA" width="2201" height="550" loading="lazy"></a><p>Piedmont High School DECA</p><p>Meetings: Tuesdays during lunch<br>Room 204</p></div><nav class="footer-links" aria-label="DECA resources"><h2>DECA resources</h2><a href="https://www.deca.org/" target="_blank" rel="noopener noreferrer">DECA Inc. ↗</a><a href="https://californiadeca.org/" target="_blank" rel="noopener noreferrer">California DECA ↗</a><a href="https://www.decaplus.org/" target="_blank" rel="noopener noreferrer">DECA+ competition study ↗</a></nav><div class="footer-contact"><h2>Connect with our chapter</h2><a href="#contact">Contact Piedmont DECA →</a><p><strong>Member communication: Slack</strong><br>Ask an officer or Mr. Christensen for an invitation.</p><a href="https://www.instagram.com/piedmonthighdeca/" target="_blank" rel="noopener noreferrer">Instagram · @piedmonthighdeca ↗</a><p>Chapter advisor: Mr. Christensen<br><a href="mailto:fchristensen@piedmont.k12.ca.us">fchristensen@piedmont.k12.ca.us</a></p></div></footer>
 
 <dialog aria-labelledby="join-title">
   <button
@@ -495,5 +519,18 @@ function systemChanged(event){let saved;try{saved=localStorage.getItem('piedmont
 if(preference.addEventListener)preference.addEventListener('change',systemChanged);
 })();
 </script>
-</body>
+<script>
+document.getElementById('contact-form').addEventListener('submit',function(event){
+event.preventDefault();
+const form=event.currentTarget;
+if(!form.reportValidity())return;
+const name=form.elements.name.value.trim();
+const email=form.elements.email.value.trim();
+const topic=form.elements.topic.value;
+const message=form.elements.message.value.trim();
+const subject='Piedmont DECA: '+topic;
+const body='Name: '+name+'\nReply email: '+email+'\n\n'+message;
+window.location.href='mailto:fchristensen@piedmont.k12.ca.us?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+});
+</script></body>
 </html>
