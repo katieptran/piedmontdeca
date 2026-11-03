@@ -15,6 +15,9 @@ main{overflow:hidden}.hero,.section{max-width:1280px;margin:auto;padding:72px 60
 @media(max-width:1000px){header{flex-wrap:wrap;position:relative}nav{width:100%;justify-content:space-between;gap:12px}.hero{gap:35px;padding-top:55px}.hero,.section{padding-left:5%;padding-right:5%}.hero{grid-template-columns:1.3fr 1fr}}
 @media(max-width:650px){header{padding:18px 5%}.brand{font-size:20px}nav{flex-wrap:wrap;justify-content:flex-start;gap:14px;font-size:12px}nav .btn{padding:9px 12px;font-size:12px}.hero{grid-template-columns:1fr;padding:45px 5%;gap:32px}h1{font-size:40px;letter-spacing:-.8px}.hero p{font-size:16px}.section{padding:45px 5%}.section-head{display:block}.section-head p{margin-top:20px}.cards{grid-template-columns:1fr;gap:25px}.path{grid-template-columns:1fr;gap:20px}.path-visual{display:none}.tabs button{font-size:12px;padding:12px 10px}.event-row{grid-template-columns:32px 1fr;gap:16px}.event-row>.tag,.event-row>.textlink{grid-column:2;justify-self:start}.team-grid{grid-template-columns:1fr 1fr;gap:0 20px}.person h3{font-size:16px}.social-banner{flex-direction:column;align-items:start;padding:22px}.join{display:block;padding:35px 5%}.join h2{font-size:28px}.join .btn{margin-top:25px}footer{flex-direction:column;align-items:start;padding:30px 5%;gap:18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.club-photo{max-width:1160px;margin:0 auto 55px;padding:0}.club-photo img{display:block;width:100%;height:auto;border:1px solid var(--line)}.club-photo figcaption{font-size:12px;color:var(--muted);padding:10px 0}
+.sponsor-table{width:100%;border-collapse:collapse;margin-top:30px;text-align:left;font-size:14px}.sponsor-table th{padding:14px 18px;background:var(--soft);font-size:12px;text-transform:uppercase;letter-spacing:.6px}.sponsor-table td{vertical-align:top;padding:22px 18px;border-bottom:1px solid var(--line);line-height:1.8}.sponsor-table td:first-child{width:25%;font-weight:700}.sponsor-table td:nth-child(2){width:18%;white-space:nowrap;color:var(--blue);font-weight:700}.sponsor-note{margin-top:25px;font-size:14px}.sponsor-note a{font-weight:600}@media(max-width:1000px){.club-photo{margin-left:5%;margin-right:5%}nav{flex-wrap:wrap}}@media(max-width:650px){.sponsor-table thead{display:none}.sponsor-table,.sponsor-table tbody,.sponsor-table tr,.sponsor-table td{display:block;width:100%!important}.sponsor-table tr{padding:22px 0;border-top:1px solid var(--line)}.sponsor-table td{border:0;padding:3px 0}.sponsor-table td:first-child{font-size:18px}.club-photo{margin-bottom:35px}}
 </style>
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 </head>
@@ -32,7 +35,7 @@ main{overflow:hidden}.hero,.section{max-width:1280px;margin:auto;padding:72px 60
   <nav aria-label="Main navigation">
     <a href="#about">Our chapter</a>
     <a href="#compete">Compete</a>
-    <a href="#team">Our team</a>
+    <a href="#team">Our team</a><a href="#support">Support us</a>
     <a href="#events">Get involved</a>
     <button class="btn" onclick="document.querySelector('dialog').showModal()">
       Join the chapter <span>↗</span>
@@ -67,6 +70,7 @@ main{overflow:hidden}.hero,.section{max-width:1280px;margin:auto;padding:72px 60
 
 
 
+  <figure class="club-photo"><img src="./images/piedmont-deca-club.jpg" width="2000" height="1500" alt="Piedmont DECA club members gathered together in a classroom" decoding="async"><figcaption>Piedmont High School DECA · Our chapter</figcaption></figure>
   <section class="section" id="about">
     <div class="section-head">
       <div>
@@ -287,6 +291,7 @@ main{overflow:hidden}.hero,.section{max-width:1280px;margin:auto;padding:72px 60
     </div>
   </section>
 
+<section class="section" id="support" aria-labelledby="support-heading"><div class="section-head"><div><div class="eyebrow">Support our chapter</div><h2 id="support-heading">Sponsorship tiers &amp; benefits</h2></div><p>Your support helps cover competition participation, advisor support, educational resources, and chapter fees.</p></div><table class="sponsor-table"><thead><tr><th scope="col">Sponsorship level</th><th scope="col">Contribution</th><th scope="col">Recognition &amp; benefits</th></tr></thead><tbody><tr><td>Platinum Diamond</td><td>$2,001+</td><td>Social media shout-out; handwritten thank-you letter; DECA blanket; logo featured on the website for 3 years; logo on the annual DECA shirt; logo on the chapter banner.</td></tr><tr><td>Gold Diamond</td><td>$1,001–$2,000</td><td>Social media shout-out; handwritten thank-you letter; DECA blanket; logo featured on the website for 2 years; logo on the annual DECA shirt.</td></tr><tr><td>Bronze Diamond</td><td>$501–$1,000</td><td>Social media shout-out; handwritten thank-you letter; DECA tote bag; logo featured on the website for 1 year.</td></tr><tr><td>DECA Believer</td><td>$101–$500</td><td>Social media shout-out; handwritten thank-you letter; DECA lanyard.</td></tr><tr><td>Friend of DECA</td><td>$10–$100</td><td>Social media shout-out; handwritten thank-you letter.</td></tr></tbody></table><p class="sponsor-note">Interested in supporting Piedmont DECA? Contact our VP of Fundraising, Tobias Tsai, or chapter advisor, Mr. Christensen. You can also <a href="https://www.instagram.com/piedmonthighdeca/" target="_blank" rel="noopener noreferrer">connect with our chapter on Instagram</a>.</p></section>
   <section class="join">
     <div>
       <div class="eyebrow">Membership requirement</div>
