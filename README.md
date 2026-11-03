@@ -1,5 +1,7 @@
 # Piedmont High School DECA
 
+**[Visit the Piedmont DECA website](https://katieptran.github.io/piedmontdeca/)**
+
 Empowering the next generation of business leaders through hands-on learning, competitive experiences, and professional development.
 
 ## About Us
